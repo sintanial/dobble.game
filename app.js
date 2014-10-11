@@ -1,4 +1,5 @@
 var thunkify = require('thunkify');
+var ClientError = require('./src/error/client');
 
 
 var koa = require('koa');
@@ -46,6 +47,7 @@ app.use(function *(next) {
     try {
         yield next;
     } catch (e) {
+        throw e;
         if (e instanceof ClientError) {
             this.status = 200;
             this.body = {
@@ -61,7 +63,6 @@ app.use(function *(next) {
 //                this.body = e;
                 throw e;
             } else {
-                this.di.logger.error(e);
                 this.body = 'internal server error'; // TODO: render pretty 500 error
             }
         }
