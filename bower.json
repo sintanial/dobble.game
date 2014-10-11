@@ -1,0 +1,22 @@
+{
+    "name": "dobble.game",
+    "version": "0.0.0",
+    "homepage": "https://github.com/sintanial/dobble.game",
+    "authors": [
+        "sintanial <sintanial@gmail.com>",
+        "nikoole <https://github.com/Nikoole>"
+    ],
+    "dependencies": {
+        "backbone": "~1.1.2",
+        "jquery": "~1.11.1"
+    },
+    "main": "app.js",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

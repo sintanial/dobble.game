@@ -3,6 +3,10 @@
     "version": "0.0.1",
     "private": true,
     "description": "funny game",
+    "authors": [
+        "sintanial <sintanial@gmail.com>",
+        "nikoole <https://github.com/Nikoole>"
+    ],
     "scripts": {
         "start": "node --harmony ./bin/www"
     },
@@ -27,7 +31,9 @@
         "koa-qs": "~1.0",
         "koa-cash": "~1.0",
 
-        "node-compass": "0.2.3"
+        "node-compass": "0.2.3",
+
+        "bower": "*"
     },
     "devDependencies": {
         "bower": "~1.3",
