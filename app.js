@@ -31,7 +31,7 @@ koa.qs = require('koa-qs');
 koa.cache = require('koa-cash');
 
 
-var config = require();
+var config = require('./config/config');
 var routes = require('./src/routes');
 
 var app = koa();
@@ -85,14 +85,6 @@ app.use(koa.views(config.view.directory, config.view));
 app.use(koa.flash(config.flash));
 
 routes(app);
-
-if (!module.parent) {
-    app.listen(config.port, function () {
-        console.log('Server running on port ' + config.port)
-    });
-} else {
-    module.exports = app;
-}
 
 if (!module.parent) {
     app.listen(config.port, function () {
